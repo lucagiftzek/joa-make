@@ -19,7 +19,7 @@
 		"error": {
 			"401": {
 				"type": "InvalidAccessTokenError",
-				"message": "Job Opportunities API (JOA) rejected the API key (401). A free key (no card required) is available at https://jobopportunitiesapi.org/signup. {{body.message}}"
+				"message": "Job Opportunities API (JOA) rejected the API key (401). A free key (no card required) is available at https://jobopportunitiesapi.org/register. {{body.message}}"
 			},
 			"message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
 		}

@@ -5,6 +5,6 @@
 		"label": "API key",
 		"required": true,
 		"editable": true,
-		"help": "Your Job Opportunities API (JOA) key. Get a free key (no card required) at [jobopportunitiesapi.org/signup](https://jobopportunitiesapi.org/signup)."
+		"help": "Your Job Opportunities API (JOA) key. Get a free key (no card required) at [jobopportunitiesapi.org/register](https://jobopportunitiesapi.org/register)."
 	}
 ]

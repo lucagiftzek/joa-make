@@ -130,7 +130,7 @@ test('get-job, get-company, universal call and RPC build the right requests', ()
 test('base error directive maps statuses to clear messages and Make error types', async () => {
   const { comm } = moduleCode('search-jobs');
   const cases = [
-    [401, { error: 'invalid_key', message: 'That key is not valid.' }, 'InvalidAccessTokenError', /rejected the API key \(401\).*signup.*not valid/],
+    [401, { error: 'invalid_key', message: 'That key is not valid.' }, 'InvalidAccessTokenError', /rejected the API key \(401\).*register.*not valid/],
     [402, { error: 'record_quota_exhausted', message: 'Allowance used.' }, 'RuntimeError', /record allowance.*Allowance used/],
     [403, { error: 'plan_upgrade_required', message: 'Growth needed.' }, 'InvalidConfigurationError', /does not include this endpoint \(403\)/],
     [422, { error: 'bad_remote', message: 'Unknown remote.' }, 'DataError', /rejected a parameter \(422\): Unknown remote/],

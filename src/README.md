@@ -3,7 +3,7 @@
 Employer-direct job postings from employers' own applicant tracking systems and career sites. Every field is tagged
 published, inferred or absent, and closed roles are tracked so stale listings can be removed.
 
-**Connect:** paste your API key. A free key (no card required) is available at https://jobopportunitiesapi.org/signup.
+**Connect:** paste your API key. A free key (no card required) is available at https://jobopportunitiesapi.org/register.
 Coverage (live figures): https://jobopportunitiesapi.org/coverage · API docs: https://jobopportunitiesapi.org/docs
 
 ## Modules

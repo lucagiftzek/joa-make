@@ -4,7 +4,7 @@ Source of a Make custom app for the **Job Opportunities API (JOA)**: employer-di
 applicant tracking systems and career sites, every field tagged published / inferred / absent, closures tracked.
 
 - Website: https://jobopportunitiesapi.org — coverage (live figures): https://jobopportunitiesapi.org/coverage
-- API docs: https://jobopportunitiesapi.org/docs — free API key (no card required): https://jobopportunitiesapi.org/signup
+- API docs: https://jobopportunitiesapi.org/docs — free API key (no card required): https://jobopportunitiesapi.org/register
 
 `src/` uses the **local development layout of the official "Make Apps Editor" VS Code extension**
 (`Integromat.apps-sdk`): `makecomapp.json` + IMLJSON code files (`*.iml.jsonc`, the extension's current default;
@@ -25,7 +25,7 @@ the files contain no comments, so they are also plain JSON). Deploy it with *Dep
 | list-companies | RPC | `GET /v1/companies` | label/value pairs for dropdowns |
 
 Base (`general/base.iml.jsonc`): base URL, Bearer header from the connection, per-status errors —
-401 InvalidAccessTokenError (with the signup link), 402 record allowance, 403 InvalidConfigurationError (plan),
+401 InvalidAccessTokenError (with the registration link), 402 record allowance, 403 InvalidConfigurationError (plan),
 404/410/400/422 DataError, 429 RateLimitError (with `Retry-After`) — and `log.sanitize` for the Authorization header.
 
 No "Watch Job Changes": Make keeps only the last item's date and ID between runs, which cannot carry the change
