@@ -1,0 +1,257 @@
+[
+	{
+		"name": "q",
+		"type": "text",
+		"label": "Keywords",
+		"help": "Full-text search over job title, company name and location (not the description), for example `data engineer`. Words match exactly: `engineer` does not match `engineering`."
+	},
+	{
+		"name": "country",
+		"type": "text",
+		"label": "Countries",
+		"help": "Comma-separated ISO-3166 alpha-2 codes, for example `DE,GB,US`."
+	},
+	{
+		"name": "remote",
+		"type": "select",
+		"multiple": true,
+		"label": "Work arrangement",
+		"options": [
+			{
+				"label": "Remote",
+				"value": "remote"
+			},
+			{
+				"label": "Hybrid",
+				"value": "hybrid"
+			},
+			{
+				"label": "On site",
+				"value": "on_site"
+			},
+			{
+				"label": "Not stated",
+				"value": "not_stated"
+			}
+		],
+		"help": "Only jobs with this remote status."
+	},
+	{
+		"name": "employment_type",
+		"type": "select",
+		"multiple": true,
+		"label": "Employment type",
+		"options": [
+			{
+				"label": "Full-time",
+				"value": "Full-time"
+			},
+			{
+				"label": "Part-time",
+				"value": "Part-time"
+			},
+			{
+				"label": "Contract",
+				"value": "Contract"
+			},
+			{
+				"label": "Temporary",
+				"value": "Temporary"
+			},
+			{
+				"label": "Internship",
+				"value": "Internship"
+			},
+			{
+				"label": "Not stated",
+				"value": "not_stated"
+			}
+		],
+		"help": "Only jobs with this employment type."
+	},
+	{
+		"name": "seniority",
+		"type": "select",
+		"multiple": true,
+		"label": "Seniority",
+		"options": [
+			{
+				"label": "Intern",
+				"value": "Intern"
+			},
+			{
+				"label": "Entry",
+				"value": "Entry"
+			},
+			{
+				"label": "Mid",
+				"value": "Mid"
+			},
+			{
+				"label": "Senior",
+				"value": "Senior"
+			},
+			{
+				"label": "Lead",
+				"value": "Lead"
+			},
+			{
+				"label": "Manager",
+				"value": "Manager"
+			},
+			{
+				"label": "Director",
+				"value": "Director"
+			},
+			{
+				"label": "Executive",
+				"value": "Executive"
+			},
+			{
+				"label": "Not stated",
+				"value": "not_stated"
+			}
+		],
+		"help": "Only jobs at this seniority level."
+	},
+	{
+		"name": "category",
+		"type": "select",
+		"multiple": true,
+		"label": "Category",
+		"options": [
+			{
+				"label": "Consulting & Strategy",
+				"value": "Consulting & Strategy"
+			},
+			{
+				"label": "Construction & Trades",
+				"value": "Construction & Trades"
+			},
+			{
+				"label": "Customer Support",
+				"value": "Customer Support"
+			},
+			{
+				"label": "Data & Analytics",
+				"value": "Data & Analytics"
+			},
+			{
+				"label": "Design",
+				"value": "Design"
+			},
+			{
+				"label": "Education",
+				"value": "Education"
+			},
+			{
+				"label": "Engineering",
+				"value": "Engineering"
+			},
+			{
+				"label": "Finance",
+				"value": "Finance"
+			},
+			{
+				"label": "Healthcare",
+				"value": "Healthcare"
+			},
+			{
+				"label": "Hospitality",
+				"value": "Hospitality"
+			},
+			{
+				"label": "HR & Recruiting",
+				"value": "HR & Recruiting"
+			},
+			{
+				"label": "Legal & Compliance",
+				"value": "Legal & Compliance"
+			},
+			{
+				"label": "Logistics & Transport",
+				"value": "Logistics & Transport"
+			},
+			{
+				"label": "Manufacturing",
+				"value": "Manufacturing"
+			},
+			{
+				"label": "Marketing",
+				"value": "Marketing"
+			},
+			{
+				"label": "Operations & Admin",
+				"value": "Operations & Admin"
+			},
+			{
+				"label": "Procurement",
+				"value": "Procurement"
+			},
+			{
+				"label": "Product",
+				"value": "Product"
+			},
+			{
+				"label": "Retail",
+				"value": "Retail"
+			},
+			{
+				"label": "Safety & Environment",
+				"value": "Safety & Environment"
+			},
+			{
+				"label": "Sales",
+				"value": "Sales"
+			},
+			{
+				"label": "Science & Research",
+				"value": "Science & Research"
+			},
+			{
+				"label": "Security",
+				"value": "Security"
+			},
+			{
+				"label": "Skilled Technician",
+				"value": "Skilled Technician"
+			},
+			{
+				"label": "Uncategorised",
+				"value": "uncategorised"
+			}
+		],
+		"help": "Only jobs in this job family."
+	},
+	{
+		"name": "company",
+		"type": "text",
+		"label": "Companies",
+		"help": "Comma-separated company slugs, for example `google`. Use the Search Companies module to look slugs up."
+	},
+	{
+		"name": "posted_after",
+		"type": "date",
+		"label": "Posted after",
+		"help": "Only jobs posted after this date and time."
+	},
+	{
+		"name": "include_description",
+		"type": "boolean",
+		"label": "Include description",
+		"default": false,
+		"help": "Also return the job advert text (plain text) in the `description` field."
+	},
+	{
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"required": true,
+		"default": 10,
+		"validate": {
+			"min": 1,
+			"max": 1000
+		},
+		"help": "Maximum number of jobs to return (1-1000). Every returned job counts against your plan's record allowance."
+	}
+]

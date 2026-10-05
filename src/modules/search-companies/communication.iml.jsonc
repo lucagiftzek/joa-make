@@ -1,0 +1,20 @@
+{
+	"url": "/v1/companies",
+	"method": "GET",
+	"qs": {
+		"q": "{{parameters.q}}",
+		"country": "{{upper(parameters.country)}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"response": {
+		"limit": "{{parameters.limit}}",
+		"iterate": "{{body.data}}",
+		"output": "{{item}}"
+	},
+	"pagination": {
+		"qs": {
+			"cursor": "{{body.next_cursor}}"
+		},
+		"condition": "{{body.has_more}}"
+	}
+}

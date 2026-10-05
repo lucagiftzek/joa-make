@@ -1,0 +1,7 @@
+{
+	"url": "/v1/companies/{{encodeURL(trim(parameters.slug))}}",
+	"method": "GET",
+	"response": {
+		"output": "{{body.data}}"
+	}
+}

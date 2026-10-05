@@ -1,0 +1,65 @@
+[
+	{
+		"name": "slug",
+		"type": "text",
+		"label": "Company slug"
+	},
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "website",
+		"type": "text",
+		"label": "Website"
+	},
+	{
+		"name": "logo",
+		"type": "url",
+		"label": "Logo URL"
+	},
+	{
+		"name": "country",
+		"type": "text",
+		"label": "Country (ISO code)"
+	},
+	{
+		"name": "industry",
+		"type": "text",
+		"label": "Industry"
+	},
+	{
+		"name": "org_type",
+		"type": "text",
+		"label": "Organisation type"
+	},
+	{
+		"name": "sectors",
+		"type": "array",
+		"label": "Sectors",
+		"spec": {
+			"type": "text"
+		}
+	},
+	{
+		"name": "open_roles",
+		"type": "uinteger",
+		"label": "Open roles available in the API"
+	},
+	{
+		"name": "own_site_roles",
+		"type": "uinteger",
+		"label": "Roles seen on the own careers page"
+	},
+	{
+		"name": "careers_url",
+		"type": "url",
+		"label": "Careers page URL"
+	},
+	{
+		"name": "first_seen",
+		"type": "date",
+		"label": "First seen"
+	}
+]

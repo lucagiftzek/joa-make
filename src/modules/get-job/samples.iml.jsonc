@@ -1,0 +1,32 @@
+{
+	"job": {
+		"id": "defb93bc-0de5-432d-8323-185757ba256f",
+		"slug": "warehouse-associate-defb93bc",
+		"title": "Warehouse Associate",
+		"company": "Example Logistics",
+		"company_slug": "example-logistics",
+		"location": "Hamburg, Germany",
+		"city": "Hamburg",
+		"country": "DE",
+		"remote": "on_site",
+		"remote_inferred": true,
+		"employment_type": "Full-time",
+		"seniority": "Entry",
+		"category": "Logistics & Transport",
+		"posted_at": "2026-10-05T17:16:38Z",
+		"first_seen_at": "2026-10-05T15:29:41Z",
+		"last_verified_at": "2026-10-05T18:18:53Z",
+		"status": "live",
+		"apply_url": "https://example-logistics.jobs.example/job/2828434",
+		"source": "personio",
+		"source_type": "ats",
+		"has_description": true,
+		"field_sources": {
+			"remote": "inferred",
+			"location": "published",
+			"posted_at": "published",
+			"salary": "absent"
+		}
+	},
+	"description": "We are looking for a Warehouse Associate to join our team in Hamburg.\n\nWhat you will do: ..."
+}

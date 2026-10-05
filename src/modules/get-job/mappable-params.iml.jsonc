@@ -1,0 +1,16 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Job ID or slug",
+		"required": true,
+		"help": "The job `id` (UUID) or its public `slug`, for example from Watch New Jobs or Search Jobs."
+	},
+	{
+		"name": "include_closed",
+		"type": "boolean",
+		"label": "Include closed jobs",
+		"default": false,
+		"help": "Return the job even after it has closed (status `closed`) instead of a not-found error."
+	}
+]

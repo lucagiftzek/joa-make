@@ -1,0 +1,14 @@
+{
+	"slug": "example-logistics",
+	"name": "Example Logistics",
+	"website": "example-logistics.example",
+	"country": "DE",
+	"industry": "Logistics",
+	"org_type": "Enterprise",
+	"sectors": [
+		"Logistics & Transport"
+	],
+	"open_roles": 12,
+	"own_site_roles": 0,
+	"first_seen": "2026-07-14"
+}

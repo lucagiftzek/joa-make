@@ -1,0 +1,27 @@
+{
+	"url": "https://api.jobopportunitiesapi.org/v1/me",
+	"method": "GET",
+	"headers": {
+		"Authorization": "Bearer {{parameters.apiKey}}",
+		"Accept": "application/json"
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.authorization",
+			"request.headers.Authorization"
+		]
+	},
+	"response": {
+		"metadata": {
+			"type": "text",
+			"value": "{{body.plan}} plan"
+		},
+		"error": {
+			"401": {
+				"type": "InvalidAccessTokenError",
+				"message": "Job Opportunities API (JOA) rejected the API key (401). A free key (no card required) is available at https://jobopportunitiesapi.org/signup. {{body.message}}"
+			},
+			"message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
+		}
+	}
+}

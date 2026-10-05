@@ -1,0 +1,18 @@
+{
+  "name": "joa-make-app-dev",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Development checks for the Job Opportunities API (JOA) Make custom app (source in src/)",
+  "author": "Loukas Tzekos <support@jobopportunitiesapi.org>",
+  "scripts": {
+    "fetch-schemas": "node scripts/fetch-schemas.mjs",
+    "validate": "node test/validate.mjs",
+    "test": "node test/validate.mjs && node --test test/simulate.mjs",
+    "test:live": "LIVE=1 node --test test/simulate.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

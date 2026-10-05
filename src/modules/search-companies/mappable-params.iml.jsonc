@@ -1,0 +1,26 @@
+[
+	{
+		"name": "q",
+		"type": "text",
+		"label": "Company name",
+		"help": "Search employers by name, for example `google`."
+	},
+	{
+		"name": "country",
+		"type": "text",
+		"label": "Country",
+		"help": "ISO-3166 alpha-2 country code, for example `US`."
+	},
+	{
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"required": true,
+		"default": 10,
+		"validate": {
+			"min": 1,
+			"max": 200
+		},
+		"help": "Maximum number of companies to return."
+	}
+]

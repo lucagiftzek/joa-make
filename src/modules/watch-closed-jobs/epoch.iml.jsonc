@@ -1,0 +1,16 @@
+{
+	"url": "/v1/jobs/expired",
+	"method": "GET",
+	"qs": {
+		"since": "{{formatDate(addDays(now, -1), 'YYYY-MM-DDTHH:mm:ss[Z]', 'UTC')}}",
+		"limit": "20"
+	},
+	"response": {
+		"limit": 20,
+		"iterate": "{{body.data}}",
+		"output": {
+			"date": "{{item.closed_at}}",
+			"label": "{{item.id}} closed {{formatDate(item.closed_at, 'YYYY-MM-DD HH:mm')}} ({{item.closed_reason}})"
+		}
+	}
+}

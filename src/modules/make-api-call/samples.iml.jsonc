@@ -1,0 +1,11 @@
+{
+	"body": {
+		"data": [],
+		"next_cursor": null,
+		"has_more": false
+	},
+	"headers": {
+		"content-type": "application/json"
+	},
+	"statusCode": 200
+}

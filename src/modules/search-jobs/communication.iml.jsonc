@@ -1,0 +1,27 @@
+{
+	"url": "/v1/jobs",
+	"method": "GET",
+	"qs": {
+		"q": "{{parameters.q}}",
+		"country": "{{upper(parameters.country)}}",
+		"remote": "{{join(parameters.remote, ',')}}",
+		"employment_type": "{{join(parameters.employment_type, ',')}}",
+		"seniority": "{{join(parameters.seniority, ',')}}",
+		"category": "{{join(parameters.category, ',')}}",
+		"company": "{{parameters.company}}",
+		"posted_after": "{{if(parameters.posted_after, formatDate(parameters.posted_after, 'YYYY-MM-DDTHH:mm:ss[Z]', 'UTC'), '')}}",
+		"include_description": "{{if(parameters.include_description, 'true', '')}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"response": {
+		"limit": "{{parameters.limit}}",
+		"iterate": "{{body.data}}",
+		"output": "{{item}}"
+	},
+	"pagination": {
+		"qs": {
+			"cursor": "{{body.next_cursor}}"
+		},
+		"condition": "{{body.has_more}}"
+	}
+}

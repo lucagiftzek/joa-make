@@ -1,0 +1,25 @@
+{
+	"url": "/v1/jobs/expired",
+	"method": "GET",
+	"qs": {
+		"since": "{{formatDate(ifempty(data.lastDate, now), 'YYYY-MM-DDTHH:mm:ss.SSS[Z]', 'UTC')}}{{if(data.lastID, '|', '')}}{{data.lastID}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"response": {
+		"limit": "{{parameters.limit}}",
+		"iterate": "{{body.data}}",
+		"output": "{{item}}",
+		"trigger": {
+			"type": "date",
+			"id": "{{item.id}}",
+			"date": "{{item.closed_at}}",
+			"order": "asc"
+		}
+	},
+	"pagination": {
+		"qs": {
+			"since": "{{body.next_since}}"
+		},
+		"condition": "{{body.count >= parameters.limit}}"
+	}
+}

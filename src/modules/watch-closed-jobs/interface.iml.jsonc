@@ -1,0 +1,17 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Job ID"
+	},
+	{
+		"name": "closed_at",
+		"type": "date",
+		"label": "Closed at"
+	},
+	{
+		"name": "closed_reason",
+		"type": "text",
+		"label": "Closed reason (expired_upstream, not_seen, employer_closed, deadline_passed)"
+	}
+]

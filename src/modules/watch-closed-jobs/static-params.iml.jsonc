@@ -1,0 +1,14 @@
+[
+	{
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Maximum number of returned closures",
+		"required": true,
+		"default": 100,
+		"validate": {
+			"min": 1,
+			"max": 10000
+		},
+		"help": "Maximum number of closures Make works with in one execution cycle (1-10000). Any remainder is read in the next cycle."
+	}
+]

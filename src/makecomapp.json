@@ -1,0 +1,156 @@
+{
+	"fileVersion": 1,
+	"generalCodeFiles": {
+		"base": "general/base.iml.jsonc",
+		"common": "general/common.json",
+		"readme": "README.md",
+		"groups": "modules/groups.json"
+	},
+	"components": {
+		"connection": {
+			"joa-api-key": {
+				"label": "Job Opportunities API (JOA)",
+				"connectionType": "basic",
+				"codeFiles": {
+					"communication": "connections/joa-api-key/communication.iml.jsonc",
+					"params": "connections/joa-api-key/params.iml.jsonc",
+					"common": null
+				}
+			}
+		},
+		"webhook": {},
+		"module": {
+			"watch-new-jobs": {
+				"label": "Watch New Jobs",
+				"description": "Triggers when a new employer-direct job matching your filters is published.",
+				"moduleType": "trigger",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/watch-new-jobs/communication.iml.jsonc",
+					"epoch": "modules/watch-new-jobs/epoch.iml.jsonc",
+					"staticParams": "modules/watch-new-jobs/static-params.iml.jsonc",
+					"mappableParams": "modules/watch-new-jobs/mappable-params.iml.jsonc",
+					"interface": "modules/watch-new-jobs/interface.iml.jsonc",
+					"samples": "modules/watch-new-jobs/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"watch-closed-jobs": {
+				"label": "Watch Closed Jobs",
+				"description": "Triggers when a job closes or expires at its source. Requires the Growth plan or above.",
+				"moduleType": "trigger",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/watch-closed-jobs/communication.iml.jsonc",
+					"epoch": "modules/watch-closed-jobs/epoch.iml.jsonc",
+					"staticParams": "modules/watch-closed-jobs/static-params.iml.jsonc",
+					"mappableParams": "modules/watch-closed-jobs/mappable-params.iml.jsonc",
+					"interface": "modules/watch-closed-jobs/interface.iml.jsonc",
+					"samples": "modules/watch-closed-jobs/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"search-jobs": {
+				"label": "Search Jobs",
+				"description": "Searches for employer-direct jobs matching keywords and filters, newest first.",
+				"moduleType": "search",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/search-jobs/communication.iml.jsonc",
+					"staticParams": "modules/search-jobs/static-params.iml.jsonc",
+					"mappableParams": "modules/search-jobs/mappable-params.iml.jsonc",
+					"interface": "modules/search-jobs/interface.iml.jsonc",
+					"samples": "modules/search-jobs/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"get-job": {
+				"label": "Get a Job",
+				"description": "Retrieves a job, with its description, by ID or slug.",
+				"moduleType": "action",
+				"actionCrud": "read",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/get-job/communication.iml.jsonc",
+					"staticParams": "modules/get-job/static-params.iml.jsonc",
+					"mappableParams": "modules/get-job/mappable-params.iml.jsonc",
+					"interface": "modules/get-job/interface.iml.jsonc",
+					"samples": "modules/get-job/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"search-companies": {
+				"label": "Search Companies",
+				"description": "Searches for employers by name and country.",
+				"moduleType": "search",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/search-companies/communication.iml.jsonc",
+					"staticParams": "modules/search-companies/static-params.iml.jsonc",
+					"mappableParams": "modules/search-companies/mappable-params.iml.jsonc",
+					"interface": "modules/search-companies/interface.iml.jsonc",
+					"samples": "modules/search-companies/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"get-company": {
+				"label": "Get a Company",
+				"description": "Retrieves an employer by slug.",
+				"moduleType": "action",
+				"actionCrud": "read",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/get-company/communication.iml.jsonc",
+					"staticParams": "modules/get-company/static-params.iml.jsonc",
+					"mappableParams": "modules/get-company/mappable-params.iml.jsonc",
+					"interface": "modules/get-company/interface.iml.jsonc",
+					"samples": "modules/get-company/samples.iml.jsonc",
+					"scope": null
+				}
+			},
+			"make-api-call": {
+				"label": "Make an API Call",
+				"description": "Performs an arbitrary authorized API call.",
+				"moduleType": "universal",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "modules/make-api-call/communication.iml.jsonc",
+					"staticParams": "modules/make-api-call/static-params.iml.jsonc",
+					"mappableParams": "modules/make-api-call/mappable-params.iml.jsonc",
+					"interface": "modules/make-api-call/interface.iml.jsonc",
+					"samples": "modules/make-api-call/samples.iml.jsonc",
+					"scope": null
+				}
+			}
+		},
+		"rpc": {
+			"list-companies": {
+				"label": "List Companies",
+				"connection": "joa-api-key",
+				"altConnection": null,
+				"codeFiles": {
+					"communication": "rpcs/list-companies/communication.iml.jsonc",
+					"params": "rpcs/list-companies/params.iml.jsonc"
+				}
+			}
+		},
+		"function": {},
+		"endpoint": {}
+	},
+	"origins": [
+		{
+			"label": "Make (EU1) — set appId after creating the app",
+			"baseUrl": "https://eu1.make.com/api",
+			"appId": "job-opportunities-api",
+			"appVersion": 1,
+			"apikeyFile": "../.secrets/apikey"
+		}
+	]
+}

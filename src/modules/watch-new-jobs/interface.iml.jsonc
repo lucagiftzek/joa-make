@@ -1,0 +1,182 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Job ID"
+	},
+	{
+		"name": "slug",
+		"type": "text",
+		"label": "Job slug"
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title"
+	},
+	{
+		"name": "company",
+		"type": "text",
+		"label": "Company"
+	},
+	{
+		"name": "company_slug",
+		"type": "text",
+		"label": "Company slug"
+	},
+	{
+		"name": "company_logo",
+		"type": "url",
+		"label": "Company logo URL"
+	},
+	{
+		"name": "employer_website",
+		"type": "text",
+		"label": "Employer website"
+	},
+	{
+		"name": "location",
+		"type": "text",
+		"label": "Location"
+	},
+	{
+		"name": "city",
+		"type": "text",
+		"label": "City"
+	},
+	{
+		"name": "region",
+		"type": "text",
+		"label": "Region (US state)"
+	},
+	{
+		"name": "country",
+		"type": "text",
+		"label": "Country (ISO code)"
+	},
+	{
+		"name": "remote",
+		"type": "text",
+		"label": "Work arrangement"
+	},
+	{
+		"name": "remote_inferred",
+		"type": "boolean",
+		"label": "Work arrangement inferred"
+	},
+	{
+		"name": "employment_type",
+		"type": "text",
+		"label": "Employment type"
+	},
+	{
+		"name": "seniority",
+		"type": "text",
+		"label": "Seniority"
+	},
+	{
+		"name": "category",
+		"type": "text",
+		"label": "Category"
+	},
+	{
+		"name": "posted_at",
+		"type": "date",
+		"label": "Posted at"
+	},
+	{
+		"name": "first_seen_at",
+		"type": "date",
+		"label": "First seen at"
+	},
+	{
+		"name": "last_verified_at",
+		"type": "date",
+		"label": "Last verified at"
+	},
+	{
+		"name": "expires_at",
+		"type": "date",
+		"label": "Expires at"
+	},
+	{
+		"name": "status",
+		"type": "text",
+		"label": "Status"
+	},
+	{
+		"name": "closed_at",
+		"type": "date",
+		"label": "Closed at"
+	},
+	{
+		"name": "closed_reason",
+		"type": "text",
+		"label": "Closed reason"
+	},
+	{
+		"name": "apply_url",
+		"type": "url",
+		"label": "Apply URL (employer)"
+	},
+	{
+		"name": "salary_min",
+		"type": "number",
+		"label": "Salary minimum"
+	},
+	{
+		"name": "salary_max",
+		"type": "number",
+		"label": "Salary maximum"
+	},
+	{
+		"name": "salary_currency",
+		"type": "text",
+		"label": "Salary currency"
+	},
+	{
+		"name": "salary_period",
+		"type": "text",
+		"label": "Salary period"
+	},
+	{
+		"name": "salary_min_annual_eur",
+		"type": "number",
+		"label": "Salary minimum (annual EUR)"
+	},
+	{
+		"name": "source",
+		"type": "text",
+		"label": "Source"
+	},
+	{
+		"name": "source_type",
+		"type": "text",
+		"label": "Source type"
+	},
+	{
+		"name": "has_description",
+		"type": "boolean",
+		"label": "Has description"
+	},
+	{
+		"name": "description",
+		"type": "text",
+		"label": "Description (plain text)"
+	},
+	{
+		"name": "field_sources",
+		"type": "collection",
+		"label": "Field sources (published / inferred / absent)"
+	},
+	{
+		"name": "attribution",
+		"type": "text",
+		"label": "Attribution (show with the listing when present)"
+	},
+	{
+		"name": "canonical_url",
+		"type": "url",
+		"label": "Canonical URL (link here when present)"
+	}
+]

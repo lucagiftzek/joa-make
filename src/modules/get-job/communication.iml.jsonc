@@ -1,0 +1,13 @@
+{
+	"url": "/v1/jobs/{{encodeURL(trim(parameters.id))}}",
+	"method": "GET",
+	"qs": {
+		"include_closed": "{{if(parameters.include_closed, 'true', '')}}"
+	},
+	"response": {
+		"output": {
+			"job": "{{body.data}}",
+			"description": "{{body.description}}"
+		}
+	}
+}

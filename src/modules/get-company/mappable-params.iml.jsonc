@@ -1,0 +1,10 @@
+[
+	{
+		"name": "slug",
+		"type": "select",
+		"label": "Company",
+		"required": true,
+		"options": "rpc://list-companies",
+		"help": "Pick an employer, or map a company slug such as `google`."
+	}
+]

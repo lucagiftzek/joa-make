@@ -1,0 +1,24 @@
+[
+	{
+		"label": "Jobs",
+		"modules": [
+			"watch-new-jobs",
+			"watch-closed-jobs",
+			"search-jobs",
+			"get-job"
+		]
+	},
+	{
+		"label": "Companies",
+		"modules": [
+			"search-companies",
+			"get-company"
+		]
+	},
+	{
+		"label": "Other",
+		"modules": [
+			"make-api-call"
+		]
+	}
+]

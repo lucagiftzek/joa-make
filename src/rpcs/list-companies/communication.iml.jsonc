@@ -1,0 +1,21 @@
+{
+	"url": "/v1/companies",
+	"method": "GET",
+	"qs": {
+		"limit": "100"
+	},
+	"response": {
+		"limit": 300,
+		"iterate": "{{body.data}}",
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.slug}}"
+		}
+	},
+	"pagination": {
+		"qs": {
+			"cursor": "{{body.next_cursor}}"
+		},
+		"condition": "{{body.has_more}}"
+	}
+}

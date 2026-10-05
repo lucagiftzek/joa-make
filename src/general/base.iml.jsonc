@@ -1,0 +1,51 @@
+{
+	"baseUrl": "https://api.jobopportunitiesapi.org",
+	"headers": {
+		"Authorization": "Bearer {{connection.apiKey}}",
+		"Accept": "application/json"
+	},
+	"response": {
+		"error": {
+			"400": {
+				"type": "DataError",
+				"message": "Job Opportunities API (JOA) rejected a parameter (400): {{body.message}}"
+			},
+			"401": {
+				"type": "InvalidAccessTokenError",
+				"message": "Job Opportunities API (JOA) rejected the API key (401). Check the connection; a free key (no card required) is available at https://jobopportunitiesapi.org/signup. {{body.message}}"
+			},
+			"402": {
+				"type": "RuntimeError",
+				"message": "Your Job Opportunities API (JOA) plan has used up its record allowance for this period (402). {{body.message}}"
+			},
+			"403": {
+				"type": "InvalidConfigurationError",
+				"message": "Your Job Opportunities API (JOA) plan does not include this endpoint (403). Watch Closed Jobs needs the Growth plan or above. {{body.message}}"
+			},
+			"404": {
+				"type": "DataError",
+				"message": "Not found in Job Opportunities API (JOA) (404). {{body.message}}"
+			},
+			"410": {
+				"type": "DataError",
+				"message": "The employer withdrew this listing (410); stop showing it. {{body.message}}"
+			},
+			"422": {
+				"type": "DataError",
+				"message": "Job Opportunities API (JOA) rejected a parameter (422): {{body.message}}"
+			},
+			"429": {
+				"type": "RateLimitError",
+				"message": "Job Opportunities API (JOA) rate limit reached (429). Retry after {{ifempty(headers.`retry-after`, 60)}} seconds. {{body.message}}"
+			},
+			"message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}",
+			"type": "RuntimeError"
+		}
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.authorization",
+			"request.headers.Authorization"
+		]
+	}
+}
