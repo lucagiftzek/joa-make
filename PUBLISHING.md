@@ -1,6 +1,18 @@
-# Publishing the Make custom app (run only after Luca approves)
+# Publishing the Make custom app
 
-Nothing below has been run; no Make account was created.
+## Current state (6 Oct 2026)
+- Make account: hello@jobopportunitiesapi.org, zone **eu1**, Free plan.
+- Custom app created and deployed, **private** (not published, no review requested): app id
+  `job-opportunities-api-aniywx` (Make adds a random suffix to the requested `job-opportunities-api`), version 1,
+  label "Job Opportunities API (JOA)", theme #123A6B, icon `assets/icon-512.png`.
+- Deployed with `scripts/deploy-api.mjs` (SDK Apps REST API, same mapping as the Make Apps Editor "Deploy"):
+  `MAKE_API=http://127.0.0.1:<port>/api/v2 node scripts/deploy-api.mjs deploy`, where the port is a local proxy that adds
+  the `Authorization: Token ...` header (the script never handles the token). Remote component names are in
+  `.make-mapping.json`.
+- A shareable invite link only exists once the app is **published** (invite-only; irreversible per
+  developers.make.com "App visibility") — waiting for Luca's approval.
+
+The steps below are the original manual plan (VS Code), kept for reference.
 
 ## 1. Create the app (private) and deploy this source
 1. Sign in to Make (a free account; custom-app creation on the free plan is not documented either way — confirm in the UI).

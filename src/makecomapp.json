@@ -146,9 +146,9 @@
 	},
 	"origins": [
 		{
-			"label": "Make (EU1) — set appId after creating the app",
+			"label": "Make (EU1)",
 			"baseUrl": "https://eu1.make.com/api",
-			"appId": "job-opportunities-api",
+			"appId": "job-opportunities-api-aniywx",
 			"appVersion": 1,
 			"apikeyFile": "../.secrets/apikey"
 		}

@@ -1,0 +1,17 @@
+{
+  "connection": {
+    "joa-api-key": "job-opportunities-api-aniywx"
+  },
+  "module": {
+    "watch-new-jobs": "watchNewJobs",
+    "watch-closed-jobs": "watchClosedJobs",
+    "search-jobs": "searchJobs",
+    "get-job": "getJob",
+    "search-companies": "searchCompanies",
+    "get-company": "getCompany",
+    "make-api-call": "makeApiCall"
+  },
+  "rpc": {
+    "list-companies": "listCompanies"
+  }
+}
