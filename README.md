@@ -53,6 +53,10 @@ request Make would send and to apply `iterate` / `output` / `limit` / `trigger` 
 
 See [PUBLISHING.md](PUBLISHING.md). Nothing has been created in Make.
 
+## Showing listings publicly
+
+If you display the listings publicly, the Job Opportunities API terms ask for a visible credit, "Data: Job Opportunities API", linking to https://jobopportunitiesapi.org.
+
 ## Licence
 
 MIT — see [LICENSE](LICENSE). Maintainer: Loukas Tzekos <support@jobopportunitiesapi.org>.
